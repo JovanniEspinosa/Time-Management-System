@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Time Management System</h1>
+    </header>
+
+    <!-- Search and Filter -->
+    <section class="search-filter">
+      <div class="form-group">
+        <label for="task-search">Search</label>
+        <input type="text" id="task-search" placeholder="Search by title or description">
+      </div>
+    </section>
+
+    <!-- Add/Edit Task Section -->
+    <section class="task-form">
+      <h2>Add/Edit Task</h2>
+      <form id="add-task-form">
+        <div class="form-group">
+          <label for="task-title">Title</label>
+          <input type="text" id="task-title" placeholder="Task Title" required>
+        </div>
+        <div class="form-group">
+          <label for="task-desc">Description</label>
+          <textarea id="task-desc" placeholder="Task Description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="task-priority">Priority</label>
+          <select id="task-priority" required>
+            <option value="" disabled selected>Select Priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+        <div class="form-group time-input">
+          <label for="task-time">Estimated Time</label>
+          <input type="number" id="task-time" placeholder="Time" required>
+          <select id="time-unit">
+            <option value="minutes">Minutes</option>
+            <option value="hours">Hours</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="task-start">Start Time</label>
+          <input type="time" id="task-start" required>
+        </div>
+        <div class="form-group">
+          <label for="task-day">Select Date</label>
+          <input type="text" id="task-day" class="datepicker" placeholder="Select a Date" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Task</button>
+      </form>
+    </section>
+
+    <!-- Task List Section -->
+    <section class="task-list-section">
+      <h2>Task List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Estimated Time</th>
+            <th>Start Time</th>
+            <th>Day</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="task-list">
+          <!-- Dynamic tasks will be displayed here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Timer Section -->
+    <section class="task-timer">
+      <h2>Task Timer</h2>
+      <div class="timer-controls">
+        <p>Selected Task: <strong id="current-task">None</strong></p>
+        <p>Time Spent: <span id="time-spent">00:00</span></p>
+        <button id="start-btn" class="btn btn-success" disabled>Start</button>
+        <button id="pause-btn" class="btn btn-warning" disabled>Pause</button>
+        <button id="stop-btn" class="btn btn-danger" disabled>Stop</button>
+      </div>
+    </section>
+
+    <!-- Link to Weekly Overview -->
+    <section class="overview-link">
+      <a href="overview.html" class="btn-secondary">View Weekly Overview</a>
+    </section>
+  </div>
+
+  <!-- Flatpickr JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="script.js"></script>
+</body>
+</html>

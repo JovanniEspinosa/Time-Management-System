@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Task Form Styles */
+.task-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.task-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group input[type="number"],
+.form-group select {
+  width: auto;
+  display: inline-block;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Search and Filter Styles */
+.search-filter {
+  margin-bottom: 20px;
+}
+
+.search-filter .form-group {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.search-filter input {
+  width: 300px;
+}
+
+/* Task List Styles */
+.task-list-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.task-list-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-list-section th,
+.task-list-section td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.task-list-section th {
+  background-color: #f8f8f8;
+}
+
+/* Timer Styles */
+.task-timer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.timer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.timer-controls p {
+  font-size: 20px;
+  margin-bottom: 15px;
+
+}
+
+.timer-controls button {
+  margin: 5px;
+}
+
+/* Weekly Overview Styles */
+.weekly-overview {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weekly-overview table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.weekly-overview th,
+.weekly-overview td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.weekly-overview th {
+  background-color: #f8f8f8;
+}
+
+/* Overview Link Style */
+.overview-link {
+  text-align: center;
+  margin-top: 30px; /* Space above the link */
+}
+
+.overview-link a {
+  display: inline-block; /* Treat as a block-level element */
+  font-size: 1.1rem; /* Slightly bigger text */
+  font-weight: 600; /* Make the text bold */
+  padding: 12px 24px; /* More padding for button-like appearance */
+  text-decoration: none; /* Remove underline */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.overview-link a:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: translateY(-2px); /* Lift the button on hover */
+}
+
+.overview-link a:active {
+  background-color: #388e3c; /* Even darker green when clicked */
+  transform: translateY(1px); /* Button slightly "presses" when clicked */
+}
+
+/* Additional style for better user focus */
+.overview-link a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* Focus shadow */
+}
